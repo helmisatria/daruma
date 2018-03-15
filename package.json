@@ -1,11 +1,10 @@
 {
-  "name": "musikami",
+  "name": "cra-boilerplate-rename-it",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
-    "jsonwebtoken": "^8.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
