@@ -9,7 +9,7 @@ export default class Footer extends Component {
   state = {};
   render() {
     return (
-      <div style={{ marginBottom: '2em', backgroundColor: '#ecf5f2', paddingTop: '3.5em' }}>
+      <div style={{ paddingBottom: '3em', backgroundColor: '#ecf5f2', paddingTop: '3.5em' }}>
         <div className="ui grid container stackable centered" id="home_footerTopContainer">
           <h3 id="home_footerTitle" className="ten wide column">
             Daftarkan diri kalian untuk mempercepat pencarian kamar suatu saat nanti

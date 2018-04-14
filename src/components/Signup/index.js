@@ -14,6 +14,10 @@ class Signup extends Component {
     document.body.style.backgroundColor = '#ecf5f2';
   };
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div id="signup_container" className="ui grid centered stackable">
