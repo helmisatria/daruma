@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import '../../dist/css/signup.css';
 
 // Components
@@ -16,14 +18,15 @@ class Signup extends Component {
     return (
       <div id="signup_container" className="ui grid centered stackable">
         <div className="six wide column">
-          <h3 id="signup_logo" className="center">
-            DARUMA
-          </h3>
+          <Link to="/">
+            <h3 id="signup_logo" className="center">
+              DARUMA
+            </h3>
+          </Link>
           <div className="ui very padded segment">
             <h2 className="ui header" id="signup_header">
               Bergabunglah dengan kami sekarang juga
             </h2>
-
             <Forms />
           </div>
         </div>

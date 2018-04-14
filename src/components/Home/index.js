@@ -1,10 +1,35 @@
 import React, { Component } from 'react';
 
+import faker from 'faker';
+
+import { Link } from 'react-router-dom';
+
 // Styles
 import '../../dist/css/homepage.css';
 
+// Components
+
+import ListRumahSakit from './ListRumahSakit';
+import Footer from './Footer';
+
 export default class Home extends Component {
-  state = {};
+  state = {
+    data: [],
+  };
+
+  componentWillMount() {
+    document.body.style.backgroundColor = '#ffffff';
+    const tmp = [];
+    for (let i = 0; i < 8; i++) {
+      tmp.push({
+        nama: faker.name.findName(),
+        address: `${faker.address.city()} ${faker.address.secondaryAddress()} ${faker.address.streetAddress()}`,
+        phone: faker.phone.phoneNumber(),
+        image: faker.image.city(),
+      });
+    }
+    this.setState({ data: tmp });
+  }
   render() {
     return (
       <div>
@@ -12,7 +37,9 @@ export default class Home extends Component {
           <div id="home_herocontainer" className="ui grid container centered stackable">
             <div id="home_navwrapper">
               <div id="home_nav">
-                <h2>DARUMA</h2>
+                <Link to="/">
+                  <h2>DARUMA</h2>
+                </Link>
                 <div id="home_rightnav">
                   <h4>Home</h4>
                   <h4>Navigation</h4>
@@ -36,6 +63,8 @@ export default class Home extends Component {
             <div />
           </div>
         </header>
+        <ListRumahSakit data={this.state.data} />
+        <Footer />
       </div>
     );
   }
