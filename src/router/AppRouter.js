@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 // import jwt from 'jsonwebtoken';
 // import { jwtKey } from '../config/keys.json';
 
@@ -13,6 +8,7 @@ import {
 // import DetilPesanan from '../components/DetilPesanan';
 // import ProsesPesanan from '../components/ProsesPesanan';
 import Home from '../components/Home';
+import Signup from '../components/Signup';
 // import Login from '../components/Login';
 
 const AppRouter = () => (
@@ -20,6 +16,7 @@ const AppRouter = () => (
     <div>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/signup" exact component={Signup} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

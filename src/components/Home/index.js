@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 
 export default class Home extends Component {
-  state = {
-
-  }
+  state = {};
   render() {
-    return (
-      <div>
-        Hai!
-      </div>
-    );
+    return <div>Hai!</div>;
   }
 }
