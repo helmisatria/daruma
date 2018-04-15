@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 // import ProsesPesanan from '../components/ProsesPesanan';
 import Home from '../components/Home';
 import Signup from '../components/Signup';
+import DetailPage from '../components/DetailPage';
 // import Login from '../components/Login';
 
 const AppRouter = () => (
@@ -17,6 +18,7 @@ const AppRouter = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/signup" exact component={Signup} />
+        <Route path="/detail" exact component={DetailPage} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

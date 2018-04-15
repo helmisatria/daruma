@@ -1,4 +1,6 @@
 #home_listContainer {
+  font-family: "IBM Plex Sans", sans-serif;
+
   display: flex;
   justify-content: center;
   margin-top: 70px;
@@ -7,18 +9,21 @@
 }
 
 #home_listTitle {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 32px;
   line-height: 1.69;
   margin-bottom: 50px;
 }
 
 #home_lihatBtn {
+  font-family: "IBM Plex Sans", sans-serif;
   border-radius: 32px;
   background-color: #469b7f;
   color: white;
-  font-size: 14px;
+  font-size: 14px !important;
   width: 15rem;
   margin-top: 70px;
   margin-bottom: 70px;
   padding: 1.2rem;
+  letter-spacing: 0.8px;
 }

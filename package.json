@@ -7,15 +7,19 @@
     "gulp-sass": "^3.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.5",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
+    "react-slick": "^0.23.1",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build":
+      "react-scripts build && cp build/index.html build/200.html && surge ./build daruma.surge.sh",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

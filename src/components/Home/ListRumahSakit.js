@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Image from '../../dist/images/images.jpeg';
-// Styles
 
+// Styles
 import '../../dist/css/listrumahsakit.css';
 
 export default class ListRumahSakit extends Component {
@@ -12,7 +13,7 @@ export default class ListRumahSakit extends Component {
     return (
       <div className="ui link four stackable cards">
         {this.props.data.map(data => (
-          <div className="card" key={data.phone}>
+          <NavLink className="card" to="/detail" key={data.phone}>
             <div className="image">
               <img src={Image} />
             </div>
@@ -27,7 +28,7 @@ export default class ListRumahSakit extends Component {
                 {data.phone}
               </span>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
     );

@@ -1,0 +1,80 @@
+#detail_contentContainer {
+  margin-top: 2rem;
+  margin-bottom: 5rem; }
+
+#detail_rightPane h3 {
+  font-family: IBMPlexSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#detail_rightPaneTitle {
+  margin-bottom: 2.2rem; }
+
+#detail_address {
+  font-family: IBMPlexSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#detail_phoneTitle {
+  font-family: IBMPlexSans;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#detail_phoneNumber {
+  font-family: IBMPlexSans;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #469b7f; }
+
+#detail_directionBtn {
+  border-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #469b7f;
+  font-family: IBMPlexSans;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+#detail_footerText {
+  font-family: IBMPlexSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#detail_footerContainer {
+  background-color: #ebf7f3;
+  padding: 4em 0; }

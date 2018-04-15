@@ -6,9 +6,11 @@
   display: flex; }
 
 #home_navwrapper {
+  font-family: "IBM Plex Sans", sans-serif;
   justify-self: flex-start; }
 
 #home_nav {
+  font-family: "IBM Plex Sans", sans-serif;
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
@@ -19,6 +21,7 @@
   flex-direction: row; }
 
 #home_rightnav h4 {
+  font-family: "IBM Plex Sans", sans-serif !important;
   margin: 0 !important;
   padding: 0 1em;
   color: white;
@@ -41,6 +44,7 @@
   justify-content: space-between; }
 
 #home_heroTitle {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 40px;
   font-weight: 500;
   font-style: normal;
@@ -57,11 +61,13 @@
   border-radius: 32px; }
 
 #home_heroHelptext {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 14px;
   margin-top: 24px;
   color: white; }
 
 #home_searchBtn {
+  font-family: "IBM Plex Sans", sans-serif;
   background-color: #469b7f;
   color: white;
   font-size: 18px;

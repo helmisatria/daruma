@@ -1,0 +1,39 @@
+#ruanganitem_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+
+#ruanganitem_kelasTitle {
+  font-family: IBMPlexSans;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-right: 8px; }
+
+#ruanganitem_leftTop {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center; }
+
+#ruanganitem_price {
+  opacity: 0.54;
+  font-family: IBMPlexSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#ruanganitem_btnBook {
+  font-family: IBMPlexSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  border-radius: 12px !important;
+  background-color: #469b7f;
+  color: white;
+  font-size: 12px; }
