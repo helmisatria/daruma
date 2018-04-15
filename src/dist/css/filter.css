@@ -1,0 +1,40 @@
+#checkbox_container {
+  display: flex;
+  flex-direction: column; }
+
+.search_leftLabel {
+  margin-bottom: 0.5em; }
+
+.filter_harga {
+  margin-bottom: 0.5em !important;
+  background-color: #f0f0f0 !important; }
+
+.filter_harga::placeholder {
+  color: #a0a0a0 !important;
+  font-family: IBMPlexSans;
+  font-size: 12px !important; }
+
+.listFilterItem {
+  padding: 0 !important; }
+
+.listFilter_header {
+  font-family: IBMPlexSans;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+.listFilter_desc {
+  font-family: IBMPlexSans;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }

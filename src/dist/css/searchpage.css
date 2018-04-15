@@ -1,0 +1,75 @@
+#search_leftTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between; }
+
+#search_leftTitle h3 {
+  margin: 0;
+  font-family: IBMPlexSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#search_leftTitle #search_resetBtn {
+  font-family: IBMPlexSans;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #469b7f; }
+
+.search_leftLabel {
+  font-family: IBMPlexSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  cursor: pointer !important; }
+
+#search_container {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+#search_searchBtn {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #469b7f;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px; }
+
+#search_helpSearchText {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  margin-bottom: 1em; }
+
+.search_pagination {
+  background-color: #469b7f !important;
+  color: #ffffff !important;
+  font-family: IBMPlexSans;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center; }
+
+#search_paginationLabels {
+  margin-top: 4em;
+  margin-bottom: 3em; }

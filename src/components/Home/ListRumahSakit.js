@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Image from '../../dist/images/images.jpeg';
+import Avatar from '../../dist/images/avatar.png';
 
 // Styles
 import '../../dist/css/listrumahsakit.css';
@@ -13,9 +13,9 @@ export default class ListRumahSakit extends Component {
     return (
       <div className="ui link four stackable cards">
         {this.props.data.map(data => (
-          <NavLink className="card" to="/detail" key={data.phone}>
+          <NavLink className="card column" to="/detail" key={data.phone}>
             <div className="image">
-              <img src={Image} />
+              <img src={Avatar} />
             </div>
             <div className="content">
               <div className="header">{data.nama}</div>
@@ -39,9 +39,11 @@ export default class ListRumahSakit extends Component {
       <div id="home_listContainer" className="ui grid container">
         <h2 id="home_listTitle">Rumah Sakit Terdekat</h2>
         {this.listRumahSakit()}
-        <button className="ui button" id="home_lihatBtn">
-          LIHAT LEBIH BANYAK
-        </button>
+        <NavLink to="/search">
+          <button className="ui button" id="home_lihatBtn">
+            LIHAT LEBIH BANYAK
+          </button>
+        </NavLink>
       </div>
     );
   }

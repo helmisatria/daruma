@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../components/Home';
 import Signup from '../components/Signup';
 import DetailPage from '../components/DetailPage';
+import SearchPage from '../components/SearchPage';
 // import Login from '../components/Login';
 
 const AppRouter = () => (
@@ -19,6 +20,7 @@ const AppRouter = () => (
         <Route path="/" exact component={Home} />
         <Route path="/signup" exact component={Signup} />
         <Route path="/detail" exact component={DetailPage} />
+        <Route path="/search" exact component={SearchPage} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

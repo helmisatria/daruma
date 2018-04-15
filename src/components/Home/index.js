@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import faker from 'faker';
 
 import { Link } from 'react-router-dom';
@@ -8,7 +7,6 @@ import { Link } from 'react-router-dom';
 import '../../dist/css/homepage.css';
 
 // Components
-
 import ListRumahSakit from './ListRumahSakit';
 import Footer from './Footer';
 
@@ -49,6 +47,12 @@ export default class Home extends Component {
                   <h4>Home</h4>
                   <h4>Navigation</h4>
                   <h4>Sitemap</h4>
+                  <div id="header_navAuthItems">
+                    <Link to="/signup">
+                      <h4 id="header_registerBtn">REGISTER</h4>
+                    </Link>
+                    <h4>LOGIN</h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -57,9 +61,9 @@ export default class Home extends Component {
               <div className="ui fluid huge left icon right action input" id="home_searchContainer">
                 <i className="search icon" />
                 <input id="home_heroSearch" type="text" placeholder="Masukan nama rumah sakit atau lokasi" />
-                <button className="ui button" id="home_searchBtn">
+                <Link to="/search" className="ui button" id="home_searchBtn">
                   CARI
-                </button>
+                </Link>
               </div>
               <p id="home_heroHelptext">
                 Lanjutkan ke pencarian terakhir: <b>Rumah Sakit di Bandung</b>
