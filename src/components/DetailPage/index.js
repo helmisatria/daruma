@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 // Components
 import Header from '../Header';
 import Slider from './Slider';
@@ -12,7 +14,7 @@ import '../../dist/css/detail.css';
 import RuanganItem from './RuanganItem';
 import Maps from '../Maps';
 
-export default class DetailPage extends Component {
+class DetailPage extends Component {
   state = {
     kamar: [0, 0, 0, 0],
   };
@@ -66,3 +68,9 @@ export default class DetailPage extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DetailPage);
