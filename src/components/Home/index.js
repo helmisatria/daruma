@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import faker from 'faker';
 
+import { connect } from 'react-redux';
+
+import HospitalAction from '../../reducers/HospitalRedux';
+
 import { Link } from 'react-router-dom';
 
 // Styles
@@ -10,7 +14,7 @@ import '../../dist/css/homepage.css';
 import ListRumahSakit from './ListRumahSakit';
 import Footer from './Footer';
 
-export default class Home extends Component {
+class Home extends Component {
   state = {
     data: [],
   };
@@ -27,10 +31,16 @@ export default class Home extends Component {
       });
     }
     this.setState({ data: tmp });
+
+    this.props.getList({});
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
+  }
+
+  componentWillReceiveProps (nextProps) {
+    console.log({ nextProps });
   }
 
   render() {
@@ -78,3 +88,17 @@ export default class Home extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  fetching: state.Hospital.fetching,
+  error: state.Hospital.error,
+  message: state.Hospital.message,
+  data: state.Hospital.list
+});
+
+const mapDispatchToProps = dispatch => ({
+  getList: params =>
+    dispatch(HospitalAction.listRequest(params))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
