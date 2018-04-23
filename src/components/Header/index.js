@@ -12,18 +12,22 @@ export default class Header extends Component {
       <div className="ui segment stackable">
         <div className="ui container">
           <div id="header_navContainer">
-            <Link to="/">
+            <Link to="/" className="hideMobile">
               <h2 id="header_logo">DARUMA</h2>
             </Link>
             <div id="header_navItems">
-              <h4>Home</h4>
-              <h4>Navigation</h4>
-              <h4>Sitemap</h4>
+              <Link className="hideMobile" to="/">
+                <h4>Home</h4>
+              </Link>
+              <h4 className="hideMobile">Navigation</h4>
+              <h4 className="hideMobile">Sitemap</h4>
               <div id="header_navAuthItems">
                 <Link to="/signup">
                   <h4 id="header_registerBtn">REGISTER</h4>
                 </Link>
-                <h4>LOGIN</h4>
+                <Link to="/login">
+                  <h4>LOGIN</h4>
+                </Link>
               </div>
             </div>
           </div>

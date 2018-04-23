@@ -18,6 +18,7 @@ export default class DetailPage extends Component {
   };
 
   componentDidMount() {
+    document.body.style.backgroundColor = '#ffffff';
     window.scrollTo(0, 0);
   }
 

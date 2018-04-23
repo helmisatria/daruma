@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
 import HospitalAction from '../../reducers/HospitalRedux';
-
-import { Link } from 'react-router-dom';
 
 // Styles
 import '../../dist/css/homepage.css';
@@ -39,7 +38,7 @@ class Home extends Component {
     window.scrollTo(0, 0);
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     console.log({ nextProps });
   }
 
@@ -54,14 +53,18 @@ class Home extends Component {
                   <h2>DARUMA</h2>
                 </Link>
                 <div id="home_rightnav">
-                  <h4>Home</h4>
-                  <h4>Navigation</h4>
-                  <h4>Sitemap</h4>
+                  <Link to="/" className="hideMobile">
+                    <h4>Home</h4>
+                  </Link>
+                  <h4 className="hideMobile">Navigation</h4>
+                  <h4 className="hideMobile">Sitemap</h4>
                   <div id="header_navAuthItems">
                     <Link to="/signup">
                       <h4 id="header_registerBtn">REGISTER</h4>
                     </Link>
-                    <h4>LOGIN</h4>
+                    <Link to="/login">
+                      <h4>LOGIN</h4>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -93,12 +96,11 @@ const mapStateToProps = state => ({
   fetching: state.Hospital.fetching,
   error: state.Hospital.error,
   message: state.Hospital.message,
-  data: state.Hospital.list
+  data: state.Hospital.list,
 });
 
 const mapDispatchToProps = dispatch => ({
-  getList: params =>
-    dispatch(HospitalAction.listRequest(params))
+  getList: params => dispatch(HospitalAction.listRequest(params)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

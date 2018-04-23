@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../../dist/css/ruanganitem.css';
 
@@ -12,9 +13,11 @@ export default () => (
         </div>
         <span id="ruanganitem_price">Rp 700.000,- /malam</span>
       </div>
-      <button className="ui button" id="ruanganitem_btnBook">
-        BOOK
-      </button>
+      <Link to="/booking">
+        <button className="ui button" id="ruanganitem_btnBook">
+          BOOK
+        </button>
+      </Link>
     </div>
     <div className="ui divider" />
   </div>

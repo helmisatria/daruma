@@ -36,3 +36,7 @@
 
 #header_registerBtn {
   color: #469b7f; }
+
+@media (max-width: 767px) {
+  .hideMobile {
+    display: none; } }

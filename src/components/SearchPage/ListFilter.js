@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Avatar from '../../dist/images/avatar.png';
 
+import { Link } from 'react-router-dom';
+
 export default class ListFilter extends Component {
   state = {
     data: [0, 0, 0, 0, 0, 0, 0, 0],
@@ -10,7 +12,7 @@ export default class ListFilter extends Component {
     return (
       <div className="ui link cards grid doubling four column stackable equal width">
         {this.state.data.map(data => (
-          <div className="card column listFilterItem">
+          <Link to="/detail" className="card column listFilterItem">
             <div className="image">
               <img src={Avatar} />
             </div>
@@ -28,7 +30,7 @@ export default class ListFilter extends Component {
               </span>
               <span>(022) 2552000</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     );

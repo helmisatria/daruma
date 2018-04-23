@@ -12,7 +12,7 @@ import Signup from '../components/Signup';
 import DetailPage from '../components/DetailPage';
 import SearchPage from '../components/SearchPage';
 import Booking from '../components/Booking';
-// import Login from '../components/Login';
+import Login from '../components/Login';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -23,6 +23,7 @@ const AppRouter = () => (
         <Route path="/detail" exact component={DetailPage} />
         <Route path="/search" exact component={SearchPage} />
         <Route path="/booking" exact component={Booking} />
+        <Route path="/login" exact component={Login} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />
