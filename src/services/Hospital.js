@@ -2,34 +2,27 @@
  * Hospital services API
  */
 
-export const Hospital = (api) => {
+export const Hospital = api => {
   const get = {
-    list: params =>
-      api.get('hospital', params),
-    detail: id =>
-      api.get(`hospital/${id}`),
-    count: () =>
-      api.get('hospital/count'),
+    list: params => api.get('hospital', params),
+    detail: id => api.get(`hospital/${id}`),
+    count: () => api.get('hospital/count'),
   };
 
-  const post = {
-  };
+  const post = {};
 
-  const put = {
-  };
+  const put = {};
 
-  const patch = {
-  };
+  const patch = {};
 
-  const _delete = {
-  };
+  const _delete = {};
 
   return {
     get,
     post,
     put,
     patch,
-    delete: _delete
+    delete: _delete,
   };
 };
 

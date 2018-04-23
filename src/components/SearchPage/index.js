@@ -1,19 +1,45 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 // Components
 import Header from '../Header';
 import Filter from './Filter';
 import ListFilter from './ListFilter';
 import Footer from './Footer';
 
+import HospitalAction from '../../reducers/HospitalRedux';
+import RoomAction from '../../reducers/RoomClassRedux';
+
 // Styles
 import '../../dist/css/searchpage.css';
 
-export default class SearchPage extends Component {
-  state = {};
+class SearchPage extends Component {
+  state = {
+    data: [],
+    roomClass: [],
+  };
+
+  componentWillMount = () => {
+    this.props.getList({
+      whereLike: {
+        name: this.props.match.params.query,
+      },
+    });
+    this.props.getRoomClass();
+  };
 
   componentDidMount() {
     window.scrollTo(0, 0);
+  }
+
+  componentWillReceiveProps({ hospital, roomClass }) {
+    if (!hospital.fetching && !hospital.error) {
+      this.setState({ data: hospital.data });
+    }
+    if (!roomClass.fetching && !roomClass.error) {
+      this.setState({ roomClass: roomClass.data });
+    }
   }
 
   render() {
@@ -22,7 +48,7 @@ export default class SearchPage extends Component {
         <Header />
         <div className="ui grid container stackable" id="search_container">
           <div className="four wide column doubling">
-            <Filter />
+            <Filter roomClass={this.state.roomClass} />
           </div>
           <div className="eleven wide column">
             <div className="ui fluid small left icon right action input">
@@ -34,14 +60,14 @@ export default class SearchPage extends Component {
             </div>
             <div id="search_helpSearchText">
               <p>
-                Ditemukan 27 rumah sakit untuk <b>"Rumah Sakit Borromeus"</b>
+                Ditemukan {this.state.data.count} rumah sakit untuk <b>"Rumah Sakit Borromeus"</b>
               </p>
               <p>
                 Halaman <b>1</b> dari <b>1</b>
               </p>
             </div>
             <div className="ui divider" />
-            <ListFilter />
+            <ListFilter data={this.state.data} />
             <div className="ui grid centered" id="search_paginationLabels">
               <div className="ui large labels">
                 <div className="ui label search_pagination">1</div>
@@ -57,3 +83,25 @@ export default class SearchPage extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  hospital: {
+    fetching: state.Hospital.fetching,
+    error: state.Hospital.error,
+    message: state.Hospital.message,
+    data: state.Hospital.list,
+  },
+  roomClass: {
+    fetching: state.RoomClass.fetching,
+    error: state.RoomClass.error,
+    message: state.RoomClass.message,
+    data: state.RoomClass.data,
+  },
+});
+
+const mapDispatchToProps = dispatch => ({
+  getList: params => dispatch(HospitalAction.listRequest(params)),
+  getRoomClass: params => dispatch(RoomAction.listRequest(params)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

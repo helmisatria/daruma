@@ -14,6 +14,6 @@ export const types = {
   countRequest: [null],
   countSuccess: ['count'],
   countFailure: ['message'],
-}
+};
 
 // src/reducers/Hospital/Types.js

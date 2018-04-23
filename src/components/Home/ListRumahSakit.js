@@ -13,12 +13,12 @@ export default class ListRumahSakit extends Component {
     return (
       <div className="ui link four stackable cards">
         {this.props.data.map(data => (
-          <NavLink className="card column" to="/detail" key={data.phone}>
+          <NavLink className="card column" to={`/detail/${data.id}`} key={data.phone}>
             <div className="image">
               <img src={Avatar} />
             </div>
             <div className="content">
-              <div className="header">{data.nama}</div>
+              <div className="header">{data.name}</div>
               <div className="description">{data.address}</div>
             </div>
             <div className="extra content">

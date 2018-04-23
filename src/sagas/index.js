@@ -20,46 +20,25 @@ import { Hospital } from './HospitalSagas';
 
 const api = apiCreate();
 
-export default function * root () {
+export default function* root() {
   yield all([
     // Hospital
-    takeLatest(
-      HospitalTypes.LIST_REQUEST,
-      Hospital(api).list
-    ),
+    takeLatest(HospitalTypes.LIST_REQUEST, Hospital(api).list),
 
-    takeLatest(
-      HospitalTypes.DETAIL_REQUEST,
-      Hospital(api).detail
-    ),
+    takeLatest(HospitalTypes.DETAIL_REQUEST, Hospital(api).detail),
 
-    takeLatest(
-      HospitalTypes.COUNT_REQUEST,
-      Hospital(api).count
-    ),
+    takeLatest(HospitalTypes.COUNT_REQUEST, Hospital(api).count),
 
     // Booking
-    takeLatest(
-      BookingTypes.CREATE_REQUEST,
-      Booking(api).create
-    ),
+    takeLatest(BookingTypes.CREATE_REQUEST, Booking(api).create),
 
     // Room Class
-    takeLatest(
-      RoomClassTypes.LIST_REQUEST,
-      RoomClass(api).list
-    ),
+    takeLatest(RoomClassTypes.LIST_REQUEST, RoomClass(api).list),
 
     // Patient
-    takeLatest(
-      PatientTypes.REGISTER_REQUEST,
-      Patient(api).register
-    ),
+    takeLatest(PatientTypes.REGISTER_REQUEST, Patient(api).register),
 
-    takeLatest(
-      PatientTypes.LOGIN_REQUEST,
-      Patient(api).login
-    ),
+    takeLatest(PatientTypes.LOGIN_REQUEST, Patient(api).login),
   ]);
 }
 

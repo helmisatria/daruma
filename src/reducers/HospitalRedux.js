@@ -19,10 +19,9 @@ export default Creators;
 export const INITIAL_STATE = Immutable({
   error: false,
   fetching: false,
-  message: null
+  message: null,
 });
 
-export const reducer =
-  createReducer(INITIAL_STATE, reducers(Types, actions));
+export const reducer = createReducer(INITIAL_STATE, reducers(Types, actions));
 
 // src/reducers/HospitalRedux.js

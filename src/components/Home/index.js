@@ -16,6 +16,7 @@ import Footer from './Footer';
 class Home extends Component {
   state = {
     data: [],
+    cari: ''
   };
 
   componentWillMount() {
@@ -38,8 +39,11 @@ class Home extends Component {
     window.scrollTo(0, 0);
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log({ nextProps });
+  componentWillReceiveProps({ data }) {
+    console.log({ data });
+    if (data) {
+      this.setState({ data });
+    }
   }
 
   render() {
@@ -73,8 +77,8 @@ class Home extends Component {
               <h2 id="home_heroTitle">Mencari kamar rawat inap dengan cepat dan pasti</h2>
               <div className="ui fluid huge left icon right action input" id="home_searchContainer">
                 <i className="search icon" />
-                <input id="home_heroSearch" type="text" placeholder="Masukan nama rumah sakit atau lokasi" />
-                <Link to="/search" className="ui button" id="home_searchBtn">
+                <input id="home_heroSearch" type="text" placeholder="Masukan nama rumah sakit atau lokasi" value={this.state.cari} onChange={(event) => {this.setState({ cari: event.target.value })}} />
+                <Link to={"/search/" + this.state.cari} className="ui button" id="home_searchBtn">
                   CARI
                 </Link>
               </div>

@@ -20,8 +20,8 @@ const AppRouter = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/signup" exact component={Signup} />
-        <Route path="/detail" exact component={DetailPage} />
-        <Route path="/search" exact component={SearchPage} />
+        <Route path="/detail/:id" exact component={DetailPage} />
+        <Route path="/search/:query" exact component={SearchPage} />
         <Route path="/booking" exact component={Booking} />
         <Route path="/login" exact component={Login} />
         {/* <PrivateRoute path="/" exact component={Home} />
