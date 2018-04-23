@@ -1,55 +1,47 @@
 #home_hero {
-  background-image: url("https://preview.ibb.co/dx7prn/Background_2x.png");
+  background-image: url("../../dist/images/bg.png");
   height: 100vh;
   background-position: center;
   background-size: cover;
-  display: flex;
-}
+  display: flex; }
 
 #home_navwrapper {
   font-family: "IBM Plex Sans", sans-serif;
-  justify-self: flex-start;
-}
+  justify-self: flex-start; }
 
 #home_nav {
   font-family: "IBM Plex Sans", sans-serif;
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  align-self: flex-start;
-}
+  align-self: flex-start; }
 
 #home_rightnav {
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
 
 #home_rightnav h4 {
   font-family: "IBM Plex Sans", sans-serif !important;
   margin: 0 !important;
   padding: 0 1em;
   color: white;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 #home_nav h2 {
-  color: white !important;
-}
+  color: white !important; }
 
 #home_herocenter {
   display: flex;
   text-align: center;
   align-self: center;
   flex-direction: column;
-  width: 100%;
-}
+  width: 100%; }
 
 #home_herocontainer {
   display: flex;
   flex-direction: column;
   height: 90vh;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 #home_heroTitle {
   font-family: "IBM Plex Sans", sans-serif;
@@ -60,23 +52,19 @@
   line-height: 1.35;
   letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 #home_searchContainer {
-  margin-top: 40px;
-}
+  margin-top: 40px; }
 
 #home_heroSearch {
-  border-radius: 32px;
-}
+  border-radius: 32px; }
 
 #home_heroHelptext {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 14px;
   margin-top: 24px;
-  color: white;
-}
+  color: white; }
 
 #home_searchBtn {
   font-family: "IBM Plex Sans", sans-serif;
@@ -85,5 +73,4 @@
   font-size: 18px;
   font-weight: 500;
   border-top-right-radius: 28px;
-  border-bottom-right-radius: 28px;
-}
+  border-bottom-right-radius: 28px; }
