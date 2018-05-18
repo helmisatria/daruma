@@ -10,6 +10,7 @@ import Footer from './Footer';
 
 import HospitalAction from '../../reducers/HospitalRedux';
 import RoomAction from '../../reducers/RoomClassRedux';
+import { Link } from 'react-router-dom';
 
 // Styles
 import '../../dist/css/searchpage.css';
@@ -18,6 +19,8 @@ class SearchPage extends Component {
   state = {
     data: [],
     roomClass: [],
+    query: '',
+    current: '',
   };
 
   componentWillMount = () => {
@@ -27,13 +30,24 @@ class SearchPage extends Component {
       },
     });
     this.props.getRoomClass();
+    this.setState({ query: this.props.match.params.query })
   };
 
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
-  componentWillReceiveProps({ hospital, roomClass }) {
+  componentWillReceiveProps(nextProps) {
+    const { hospital, roomClass } = nextProps
+    const { query } = nextProps.match.params
+    if (query !== this.state.query) {
+      this.props.getList({
+        whereLike: {
+          name: query
+        }
+      })
+      this.setState({ query })
+    }
     if (!hospital.fetching && !hospital.error) {
       this.setState({ data: hospital.data });
     }
@@ -53,14 +67,15 @@ class SearchPage extends Component {
           <div className="eleven wide column">
             <div className="ui fluid small left icon right action input">
               <i className="search icon" />
-              <input id="home_heroSearch" type="text" placeholder="Masukan nama rumah sakit atau lokasi" />
-              <button className="ui button" id="search_searchBtn">
+              <input id="home_heroSearch" type="text" placeholder="Masukan nama rumah sakit atau lokasi" value={this.state.current} onChange={(event) => {this.setState({ current: event.target.value })}}/>
+              <Link to={"/search/" + this.state.current} className="ui button" id="home_searchBtn">
                 CARI
-              </button>
+              </Link>
             </div>
             <div id="search_helpSearchText">
               <p>
-                Ditemukan {this.state.data.count} rumah sakit untuk <b>"Rumah Sakit Borromeus"</b>
+                Ditemukan {this.state.data.length} rumah sakit untuk 
+                <b>"{this.state.query}"</b>
               </p>
               <p>
                 Halaman <b>1</b> dari <b>1</b>

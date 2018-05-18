@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Avatar from '../../dist/images/avatar.png';
 
@@ -12,7 +12,7 @@ export default class ListFilter extends Component {
     return (
       <div className="ui link cards grid doubling four column stackable equal width">
         {data.map(({ id, name, address, phone, longitude, latitude }) => (
-          <Link to="/detail" className="card column listFilterItem" key={id}>
+          <NavLink className="card column" to={`/detail/${id}`} key={phone}>
             <div className="image">
               <img src={Avatar} />
             </div>
@@ -30,7 +30,7 @@ export default class ListFilter extends Component {
               </span>
               <span>{phone}</span>
             </div>
-          </Link>
+          </NavLink>
         ))}
       </div>
     );
